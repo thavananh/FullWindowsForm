@@ -16,6 +16,81 @@ namespace FullWindowsForm
         {
             InitializeComponent();
         }
+        static string numberToText(char c, int n)
+        {
+            if (n == 0)
+            {
+                
+                    switch (c)
+                    {
+                        case '1':
+                            return "Một";
+                        case '2':
+                            return "Hai";
+                            
+                        case '3':
+                            return "Ba";
+                            
+                        case '4':
+                            return "Bốn";
+                            
+                        case '5':
+                            return "Năm";
+                            
+                        case '6':
+                            return "Sáu";
+                            
+                        case '7':
+                            return "Bảy";
+                            
+                        case '8':
+                            return "Tám";
+                            
+                        case '9':
+                            return "Chín";
+                        default:
+                            break;
+                    }
+            }
+            else if (n == 1)
+            {
+                switch (c)
+                {
+                    case '1':
+                        return "Một trăm";
+                    case '2':
+                        return "Hai trăm";
+
+                    case '3':
+                        return "Ba trăm";
+
+                    case '4':
+                        return "Bốn trăm";
+
+                    case '5':
+                        return "Năm trăm";
+
+                    case '6':
+                        return "Sáu trăm";
+
+                    case '7':
+                        return "Bảy trăm";
+
+                    case '8':
+                        return "Tám trăm";
+
+                    case '9':
+                        return "Chín trăm";
+                    default:
+                        break;
+                }
+            }
+            else if (n == 2)
+            {
+
+            }
+            return "";
+        }
         private void C3_2_5_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show("Bạn có muốn thoát không ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
@@ -42,6 +117,17 @@ namespace FullWindowsForm
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnThucHien_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void C3_2_5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

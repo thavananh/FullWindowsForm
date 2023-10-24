@@ -11,7 +11,7 @@ namespace FullWindowsForm
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new C2_2_4());
+            Application.Run(new C7_1_1());
         }
     }
 }
