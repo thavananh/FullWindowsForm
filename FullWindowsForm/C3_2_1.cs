@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace FullWindowsForm
 {
-    public partial class C2_2_1 : Form
+    public partial class C3_2_1 : Form
     {
-        public C2_2_1()
+        public C3_2_1()
         {
             InitializeComponent();
         }
-        private void C2_2_1_FormClosing(object sender, FormClosingEventArgs e)
+        private void C3_2_1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show("Bạn có muốn thoát không", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (r == DialogResult.No)

@@ -18,7 +18,7 @@ namespace FullWindowsForm
             InitializeComponent();
         }
 
-        private void C2_2_4_FormClosing(object sender, FormClosingEventArgs e)
+        private void C3_2_4_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show("Bạn có muốn thoát không ?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
             if (r == DialogResult.No)

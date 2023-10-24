@@ -1,6 +1,6 @@
 ﻿namespace FullWindowsForm
 {
-    partial class C2_2_1
+    partial class C3_2_1
     {
         /// <summary>
         /// Required designer variable.
@@ -45,59 +45,63 @@
             // 
             // txtB
             // 
-            txtB.Location = new Point(291, 19);
+            txtB.Location = new Point(333, 25);
+            txtB.Margin = new Padding(3, 4, 3, 4);
             txtB.Name = "txtB";
-            txtB.Size = new Size(100, 23);
+            txtB.Size = new Size(114, 27);
             txtB.TabIndex = 0;
             txtB.Leave += txt_Leave;
             // 
             // txtA
             // 
-            txtA.Location = new Point(122, 19);
+            txtA.Location = new Point(139, 25);
+            txtA.Margin = new Padding(3, 4, 3, 4);
             txtA.Name = "txtA";
-            txtA.Size = new Size(100, 23);
+            txtA.Size = new Size(114, 27);
             txtA.TabIndex = 1;
             txtA.Leave += txt_Leave;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(48, 22);
+            label1.Location = new Point(55, 29);
             label1.Name = "label1";
-            label1.Size = new Size(27, 15);
+            label1.Size = new Size(35, 20);
             label1.TabIndex = 2;
             label1.Text = "a = ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(247, 22);
+            label2.Location = new Point(282, 29);
             label2.Name = "label2";
-            label2.Size = new Size(25, 15);
+            label2.Size = new Size(32, 20);
             label2.TabIndex = 3;
             label2.Text = "b =";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 75);
+            label3.Location = new Point(42, 100);
             label3.Name = "label3";
-            label3.Size = new Size(47, 15);
+            label3.Size = new Size(60, 20);
             label3.TabIndex = 4;
             label3.Text = "Kết quả";
             // 
             // txtKetQua
             // 
-            txtKetQua.Location = new Point(122, 72);
+            txtKetQua.Location = new Point(139, 96);
+            txtKetQua.Margin = new Padding(3, 4, 3, 4);
             txtKetQua.Name = "txtKetQua";
-            txtKetQua.Size = new Size(269, 23);
+            txtKetQua.Size = new Size(307, 27);
             txtKetQua.TabIndex = 5;
             // 
             // btnCong
             // 
-            btnCong.Location = new Point(48, 122);
+            btnCong.Location = new Point(55, 163);
+            btnCong.Margin = new Padding(3, 4, 3, 4);
             btnCong.Name = "btnCong";
-            btnCong.Size = new Size(75, 23);
+            btnCong.Size = new Size(86, 31);
             btnCong.TabIndex = 6;
             btnCong.Text = "+";
             btnCong.UseVisualStyleBackColor = true;
@@ -105,9 +109,10 @@
             // 
             // btnTru
             // 
-            btnTru.Location = new Point(187, 122);
+            btnTru.Location = new Point(214, 163);
+            btnTru.Margin = new Padding(3, 4, 3, 4);
             btnTru.Name = "btnTru";
-            btnTru.Size = new Size(75, 23);
+            btnTru.Size = new Size(86, 31);
             btnTru.TabIndex = 7;
             btnTru.Text = "-";
             btnTru.UseVisualStyleBackColor = true;
@@ -115,9 +120,10 @@
             // 
             // btnNhan
             // 
-            btnNhan.Location = new Point(316, 122);
+            btnNhan.Location = new Point(361, 163);
+            btnNhan.Margin = new Padding(3, 4, 3, 4);
             btnNhan.Name = "btnNhan";
-            btnNhan.Size = new Size(75, 23);
+            btnNhan.Size = new Size(86, 31);
             btnNhan.TabIndex = 8;
             btnNhan.Text = "x";
             btnNhan.UseVisualStyleBackColor = true;
@@ -125,9 +131,10 @@
             // 
             // btnChia
             // 
-            btnChia.Location = new Point(432, 122);
+            btnChia.Location = new Point(494, 163);
+            btnChia.Margin = new Padding(3, 4, 3, 4);
             btnChia.Name = "btnChia";
-            btnChia.Size = new Size(75, 23);
+            btnChia.Size = new Size(86, 31);
             btnChia.TabIndex = 9;
             btnChia.Text = "/";
             btnChia.UseVisualStyleBackColor = true;
@@ -137,11 +144,11 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
-            // C2_2_1
+            // C3_2_1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(545, 168);
+            ClientSize = new Size(623, 224);
             Controls.Add(btnChia);
             Controls.Add(btnNhan);
             Controls.Add(btnTru);
@@ -152,9 +159,10 @@
             Controls.Add(label1);
             Controls.Add(txtA);
             Controls.Add(txtB);
-            FormClosing += C2_2_1_FormClosing;
-            Name = "C2_2_1";
-            Text = "C2_2_1";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "C3_2_1";
+            Text = "C3_2_1";
+            FormClosing += C3_2_1_FormClosing;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -175,7 +175,7 @@
             Controls.Add(label1);
             Name = "C2_2_3";
             Text = "C2_2_3";
-            FormClosing += C2_2_2_FormClosing;
+            FormClosing += C3_2_3_FormClosing;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
