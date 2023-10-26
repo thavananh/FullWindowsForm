@@ -66,6 +66,8 @@
             txtKetQua.Name = "txtKetQua";
             txtKetQua.Size = new Size(420, 27);
             txtKetQua.TabIndex = 1;
+            txtKetQua.Leave += txtKetQua_Leave;
+            txtKetQua.KeyPress += txtKetQua_KeyPress;
             // 
             // btn1
             // 
