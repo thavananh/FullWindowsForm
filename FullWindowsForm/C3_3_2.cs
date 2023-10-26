@@ -38,13 +38,14 @@ namespace FullWindowsForm
         }
         private void txtKetQua_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
+            if (!Char.IsDigit(e.KeyChar) && (e.KeyChar != '\b' || e.KeyChar != '-' || e.KeyChar != '+' || e.KeyChar != '*' || e.KeyChar != '/'))
             {
                 e.Handled = true;
             }
         }
         long a = 0;
         long b = 0;
+        char phepTinh;
 
         private void btn_Click(object sender, EventArgs e)
         {
@@ -77,11 +78,38 @@ namespace FullWindowsForm
                         }
                         else
                         {
-                            txtKetQua.Text += a.ToString(); 
+                            if (phepTinh == '-')
+                            {
+                                a = a - long.Parse(txtKetQua.Text);
+                            }
+                            else if (phepTinh == '+')
+                            {
+                                a = a + long.Parse(txtKetQua.Text);
+                            }
+                            else if (phepTinh == '*')
+                            {
+                                a = a * long.Parse(txtKetQua.Text);
+                            }
+                            else if (phepTinh == '/')
+                            {
+                                if (long.Parse(txtKetQua.Text) == 0)
+                                {
+                                    MessageBox.Show("Số không thể chia cho 0");
+                                }
+                                else
+                                {
+                                    a = a / long.Parse(txtKetQua.Text);
+                                }
+                            }
+                            txtKetQua.Clear();
+                            txtKetQua.Text += a.ToString();
+                            b = 0;
+                            a = 0;
                         }
                     }
                     else if (s == "Minus")
                     {
+                        phepTinh = '-';
                         if (a == 0)
                         {
                             a = long.Parse(txtKetQua.Text);
@@ -101,6 +129,7 @@ namespace FullWindowsForm
                     }
                     else if (s == "Plus")
                     {
+                        phepTinh = '+';
                         if (a == 0)
                         {
                             a = long.Parse(txtKetQua.Text);
@@ -120,6 +149,7 @@ namespace FullWindowsForm
                     }
                     else if (s == "Multiple")
                     {
+                        phepTinh = '*';
                         if (a == 0)
                         {
                             a = long.Parse(txtKetQua.Text);
@@ -139,6 +169,7 @@ namespace FullWindowsForm
                     }
                     else if (s == "Division")
                     {
+                        phepTinh = '/';
                         if (a == 0)
                         {
                             a = long.Parse(txtKetQua.Text);
