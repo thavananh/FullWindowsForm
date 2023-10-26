@@ -87,6 +87,7 @@
             btnXoa.TabIndex = 4;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThoat
             // 
@@ -96,6 +97,7 @@
             btnThoat.TabIndex = 5;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // txtKetQua
             // 
@@ -119,7 +121,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "C3_2_5";
             Text = "C3_2_5";
-            Load += C3_2_5_Load;
+            FormClosing += C3_2_5_FormClosing;
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();

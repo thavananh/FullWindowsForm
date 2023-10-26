@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FullWindowsForm
 {
-    public partial class C2_2_4 : Form
+    public partial class C3_2_4 : Form
     {
-        public C2_2_4()
+        public C3_2_4()
         {
             InitializeComponent();
         }

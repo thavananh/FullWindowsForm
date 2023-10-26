@@ -1,6 +1,6 @@
 ﻿namespace FullWindowsForm
 {
-    partial class C2_2_4
+    partial class C3_2_4
     {
         /// <summary>
         /// Required designer variable.
