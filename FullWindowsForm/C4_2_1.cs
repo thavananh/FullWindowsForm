@@ -15,6 +15,19 @@ namespace FullWindowsForm
         public C4_2_1()
         {
             InitializeComponent();
+            btnGiai.Enabled = false;
+        }
+
+        private void UpdateBtnGiaiState()
+        {
+            if (rdbPtrinhBac2.Enabled)
+            {
+                btnGiai.Enabled = !string.IsNullOrWhiteSpace(txtA.Text) && !string.IsNullOrWhiteSpace(txtB.Text) && !string.IsNullOrWhiteSpace(txtC.Text);
+            }
+            else
+            {
+                btnGiai.Enabled = !string.IsNullOrWhiteSpace(txtA.Text) && !string.IsNullOrWhiteSpace(txtB.Text);
+            }
         }
 
         private void phuongTrinhBac2(double a, double b, double c)
@@ -53,6 +66,25 @@ namespace FullWindowsForm
                 e.Cancel = true;
             }
         }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            UpdateBtnGiaiState();
+        }
+
+        private void rdbPtrinhBac2_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateBtnGiaiState();
+            if (rdbPtrinhBac2.Checked)
+            {
+                txtC.Enabled = true; // cho phép người dùng nhập giá trị c khi phương trình bậc 2 được chọn
+            }
+            else
+            {
+                txtC.Enabled = false; // không cho phép người dùng nhập giá trị c khi phương trình bậc 1 được chọn
+            }
+        }
+
         private void txt_Leave(object sender, EventArgs e)
         {
             TextBox textbox = (TextBox)sender;
@@ -89,6 +121,19 @@ namespace FullWindowsForm
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void rdbPtrinhBacNhat_CheckedChanged(object sender, EventArgs e)
+        {
+            UpdateBtnGiaiState();
+            if (rdbPtrinhBacNhat.Checked)
+            {
+                txtC.Enabled = false; // cho phép người dùng nhập giá trị c khi phương trình bậc 2 được chọn
+            }
+            else
+            {
+                txtC.Enabled = true; // không cho phép người dùng nhập giá trị c khi phương trình bậc 1 được chọn
+            }
         }
     }
 }
