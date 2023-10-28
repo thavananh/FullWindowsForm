@@ -250,6 +250,7 @@
             btnTinhTien.TabIndex = 8;
             btnTinhTien.Text = "Tính tiền";
             btnTinhTien.UseVisualStyleBackColor = true;
+            btnTinhTien.Click += btnTinhTien_Click;
             // 
             // btnNhapLai
             // 
@@ -259,6 +260,7 @@
             btnNhapLai.TabIndex = 9;
             btnNhapLai.Text = "Nhập lại";
             btnNhapLai.UseVisualStyleBackColor = true;
+            btnNhapLai.Click += btnNhapLai_Click;
             // 
             // btnThanhToan
             // 
@@ -268,6 +270,7 @@
             btnThanhToan.TabIndex = 10;
             btnThanhToan.Text = "Thanh toán";
             btnThanhToan.UseVisualStyleBackColor = true;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // btnThoat
             // 
@@ -277,6 +280,7 @@
             btnThoat.TabIndex = 11;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // label4
             // 
@@ -333,6 +337,7 @@
             Controls.Add(label1);
             Name = "C4_3_1";
             Text = "C4_3_1";
+            Load += C4_3_1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
