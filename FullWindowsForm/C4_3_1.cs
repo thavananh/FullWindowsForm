@@ -15,6 +15,38 @@ namespace FullWindowsForm
         public C4_3_1()
         {
             InitializeComponent();
+            btnTinhTien.Enabled = false;
+            btnThanhToan.Enabled = false;
+        }
+        private void updateCkbAndRdbState()
+        {
+            bool b1 = false, b2 = false;
+            foreach (Control c in groupBox1.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radiobutton = (RadioButton)c;
+                    if (radiobutton.Checked)
+                    {
+                        b1 = true;
+                        break;
+                    }
+                }
+            }
+            foreach (Control c in groupBox2.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox checkbox = (CheckBox)c;
+                    if (checkbox.Checked)
+                    {
+                        b2 = true;
+                        break;
+                    }
+                }
+            }
+            btnTinhTien.Enabled = !String.IsNullOrWhiteSpace(txtTenKhachHang.Text) && !String.IsNullOrWhiteSpace(txtSoKhachHang.Text) && b1 && b2;
+            btnThanhToan.Enabled = btnTinhTien.Enabled;
         }
         Dictionary<RadioButton, decimal> NuocUong;
         Dictionary<CheckBox, decimal> DoAn;
@@ -44,6 +76,22 @@ namespace FullWindowsForm
                 {ckbMyXaoBo, 30000},
                 {ckbMyCay, 50000}
             };
+            foreach (Control c in groupBox1.Controls)
+            {
+                if (c is RadioButton)
+                {
+                    RadioButton radiobutton = (RadioButton)c;
+                    radiobutton.CheckedChanged += RdbAndCkb_CheckChanged;
+                }
+            }
+            foreach (Control c in groupBox2.Controls)
+            {
+                if (c is CheckBox)
+                {
+                    CheckBox checkbox = (CheckBox)c;
+                    checkbox.CheckedChanged += RdbAndCkb_CheckChanged;
+                }
+            }
         }
 
         private void btnTinhTien_Click(object sender, EventArgs e)
@@ -85,6 +133,15 @@ namespace FullWindowsForm
             }
             txtTongTienThanhToan.Clear();
             txtTongTienThanhToan.Text += tongThanhToan;
+        }
+
+        private void txt_TextChanged(object sender, EventArgs e)
+        {
+            updateCkbAndRdbState();
+        }
+        private void RdbAndCkb_CheckChanged(object sender, EventArgs e)
+        {
+            updateCkbAndRdbState();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
