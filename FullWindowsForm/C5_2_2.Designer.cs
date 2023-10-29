@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            treeView1 = new TreeView();
+            treeViewLop = new TreeView();
             label1 = new Label();
-            comboBox1 = new ComboBox();
+            cboChonLop = new ComboBox();
             groupBox1 = new GroupBox();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            txtMaSV = new TextBox();
-            txtHoTen = new TextBox();
-            txtDiaChi = new TextBox();
-            btnCapNhat = new Button();
             btnXoa = new Button();
-            checkBox1 = new CheckBox();
+            btnCapNhat = new Button();
+            txtDiaChi = new TextBox();
+            txtHoTen = new TextBox();
+            txtMaSV = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            ckbThemLop = new CheckBox();
             groupBox2 = new GroupBox();
+            btnThemLop = new Button();
             txtTenLop = new TextBox();
             label7 = new Label();
-            btnThemLop = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // treeView1
+            // treeViewLop
             // 
-            treeView1.Location = new Point(12, 12);
-            treeView1.Name = "treeView1";
-            treeView1.Size = new Size(268, 376);
-            treeView1.TabIndex = 0;
+            treeViewLop.Location = new Point(12, 12);
+            treeViewLop.Name = "treeViewLop";
+            treeViewLop.Size = new Size(268, 376);
+            treeViewLop.TabIndex = 0;
             // 
             // label1
             // 
@@ -65,13 +65,13 @@
             label1.TabIndex = 1;
             label1.Text = "Chọn lớp";
             // 
-            // comboBox1
+            // cboChonLop
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(435, 20);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(314, 28);
-            comboBox1.TabIndex = 2;
+            cboChonLop.FormattingEnabled = true;
+            cboChonLop.Location = new Point(435, 20);
+            cboChonLop.Name = "cboChonLop";
+            cboChonLop.Size = new Size(314, 28);
+            cboChonLop.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -90,23 +90,46 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sinh viên";
             // 
-            // label2
+            // btnXoa
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(35, 44);
-            label2.Name = "label2";
-            label2.Size = new Size(54, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Mã SV:";
+            btnXoa.Location = new Point(361, 226);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(93, 38);
+            btnXoa.TabIndex = 9;
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
-            // label3
+            // btnCapNhat
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(35, 110);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 20);
-            label3.TabIndex = 3;
-            label3.Text = "Họ Tên:";
+            btnCapNhat.Location = new Point(139, 219);
+            btnCapNhat.Name = "btnCapNhat";
+            btnCapNhat.Size = new Size(177, 38);
+            btnCapNhat.TabIndex = 8;
+            btnCapNhat.Text = "Cập Nhật";
+            btnCapNhat.UseVisualStyleBackColor = true;
+            btnCapNhat.Click += btnCapNhat_Click;
+            // 
+            // txtDiaChi
+            // 
+            txtDiaChi.Location = new Point(139, 175);
+            txtDiaChi.Name = "txtDiaChi";
+            txtDiaChi.Size = new Size(314, 27);
+            txtDiaChi.TabIndex = 7;
+            // 
+            // txtHoTen
+            // 
+            txtHoTen.Location = new Point(139, 107);
+            txtHoTen.Name = "txtHoTen";
+            txtHoTen.Size = new Size(314, 27);
+            txtHoTen.TabIndex = 6;
+            // 
+            // txtMaSV
+            // 
+            txtMaSV.Location = new Point(139, 41);
+            txtMaSV.Name = "txtMaSV";
+            txtMaSV.Size = new Size(314, 27);
+            txtMaSV.TabIndex = 5;
             // 
             // label4
             // 
@@ -117,54 +140,34 @@
             label4.TabIndex = 4;
             label4.Text = "Địa Chỉ";
             // 
-            // txtMaSV
+            // label3
             // 
-            txtMaSV.Location = new Point(139, 41);
-            txtMaSV.Name = "txtMaSV";
-            txtMaSV.Size = new Size(314, 27);
-            txtMaSV.TabIndex = 5;
+            label3.AutoSize = true;
+            label3.Location = new Point(35, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 20);
+            label3.TabIndex = 3;
+            label3.Text = "Họ Tên:";
             // 
-            // txtHoTen
+            // label2
             // 
-            txtHoTen.Location = new Point(139, 107);
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(314, 27);
-            txtHoTen.TabIndex = 6;
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 44);
+            label2.Name = "label2";
+            label2.Size = new Size(54, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Mã SV:";
             // 
-            // txtDiaChi
+            // ckbThemLop
             // 
-            txtDiaChi.Location = new Point(139, 175);
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(314, 27);
-            txtDiaChi.TabIndex = 7;
-            // 
-            // btnCapNhat
-            // 
-            btnCapNhat.Location = new Point(139, 219);
-            btnCapNhat.Name = "btnCapNhat";
-            btnCapNhat.Size = new Size(177, 38);
-            btnCapNhat.TabIndex = 8;
-            btnCapNhat.Text = "Cập Nhật";
-            btnCapNhat.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            btnXoa.Location = new Point(360, 219);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(93, 38);
-            btnXoa.TabIndex = 9;
-            btnXoa.Text = "Xoá";
-            btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(296, 344);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(94, 24);
-            checkBox1.TabIndex = 4;
-            checkBox1.Text = "Thêm lớp";
-            checkBox1.UseVisualStyleBackColor = true;
+            ckbThemLop.AutoSize = true;
+            ckbThemLop.Location = new Point(296, 344);
+            ckbThemLop.Name = "ckbThemLop";
+            ckbThemLop.Size = new Size(94, 24);
+            ckbThemLop.TabIndex = 4;
+            ckbThemLop.Text = "Thêm lớp";
+            ckbThemLop.UseVisualStyleBackColor = true;
+            ckbThemLop.CheckedChanged += ckbThemLop_CheckedChanged;
             // 
             // groupBox2
             // 
@@ -177,6 +180,16 @@
             groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Thông tin sinh viên";
+            // 
+            // btnThemLop
+            // 
+            btnThemLop.Location = new Point(361, 38);
+            btnThemLop.Name = "btnThemLop";
+            btnThemLop.Size = new Size(106, 29);
+            btnThemLop.TabIndex = 6;
+            btnThemLop.Text = "Thêm lớp";
+            btnThemLop.UseVisualStyleBackColor = true;
+            btnThemLop.Click += btnThemLop_Click;
             // 
             // txtTenLop
             // 
@@ -194,28 +207,20 @@
             label7.TabIndex = 2;
             label7.Text = "Tên lớp:";
             // 
-            // btnThemLop
-            // 
-            btnThemLop.Location = new Point(361, 38);
-            btnThemLop.Name = "btnThemLop";
-            btnThemLop.Size = new Size(106, 29);
-            btnThemLop.TabIndex = 6;
-            btnThemLop.Text = "Thêm lớp";
-            btnThemLop.UseVisualStyleBackColor = true;
-            // 
             // C5_2_2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 575);
             Controls.Add(groupBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(ckbThemLop);
             Controls.Add(groupBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(cboChonLop);
             Controls.Add(label1);
-            Controls.Add(treeView1);
+            Controls.Add(treeViewLop);
             Name = "C5_2_2";
             Text = "C5_2_2";
+            Load += C5_2_2_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -226,9 +231,9 @@
 
         #endregion
 
-        private TreeView treeView1;
+        private TreeView treeViewLop;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cboChonLop;
         private GroupBox groupBox1;
         private Button btnXoa;
         private Button btnCapNhat;
@@ -238,7 +243,7 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private CheckBox checkBox1;
+        private CheckBox ckbThemLop;
         private GroupBox groupBox2;
         private Button btnThemLop;
         private TextBox txtTenLop;
