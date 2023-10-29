@@ -32,6 +32,7 @@
             btnHienThi = new Button();
             label1 = new Label();
             combbDanToc = new ComboBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // btnLoadDuLieuComboBox
@@ -42,6 +43,7 @@
             btnLoadDuLieuComboBox.TabIndex = 0;
             btnLoadDuLieuComboBox.Text = "Load dữ liệu Combobox";
             btnLoadDuLieuComboBox.UseVisualStyleBackColor = true;
+            btnLoadDuLieuComboBox.Click += btnLoadDuLieuComboBox_Click;
             // 
             // btnHienThi
             // 
@@ -51,6 +53,7 @@
             btnHienThi.TabIndex = 1;
             btnHienThi.Text = "Hiển thị";
             btnHienThi.UseVisualStyleBackColor = true;
+            btnHienThi.Click += btnHienThi_Click;
             // 
             // label1
             // 
@@ -69,11 +72,21 @@
             combbDanToc.Size = new Size(283, 28);
             combbDanToc.TabIndex = 3;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(273, 184);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 4;
+            label2.Text = "label2";
+            // 
             // C5_1_2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(589, 212);
+            ClientSize = new Size(589, 228);
+            Controls.Add(label2);
             Controls.Add(combbDanToc);
             Controls.Add(label1);
             Controls.Add(btnHienThi);
@@ -90,5 +103,6 @@
         private Button btnHienThi;
         private Label label1;
         private ComboBox combbDanToc;
+        private Label label2;
     }
 }

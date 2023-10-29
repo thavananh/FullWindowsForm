@@ -30,10 +30,10 @@
         {
             lstbTrai = new ListBox();
             lstbPhai = new ListBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnQuaPhai = new Button();
+            btnQuaPhai_All = new Button();
+            btnQuaTrai = new Button();
+            btnQuaTraiAll = new Button();
             SuspendLayout();
             // 
             // lstbTrai
@@ -54,55 +54,60 @@
             lstbPhai.Size = new Size(236, 284);
             lstbPhai.TabIndex = 1;
             // 
-            // button1
+            // btnQuaPhai
             // 
-            button1.Location = new Point(373, 63);
-            button1.Name = "button1";
-            button1.Size = new Size(56, 48);
-            button1.TabIndex = 2;
-            button1.Text = ">";
-            button1.UseVisualStyleBackColor = true;
+            btnQuaPhai.Location = new Point(373, 63);
+            btnQuaPhai.Name = "btnQuaPhai";
+            btnQuaPhai.Size = new Size(56, 48);
+            btnQuaPhai.TabIndex = 2;
+            btnQuaPhai.Text = ">";
+            btnQuaPhai.UseVisualStyleBackColor = true;
+            btnQuaPhai.Click += btnQuaPhai_Click;
             // 
-            // button2
+            // btnQuaPhai_All
             // 
-            button2.Location = new Point(373, 145);
-            button2.Name = "button2";
-            button2.Size = new Size(56, 48);
-            button2.TabIndex = 3;
-            button2.Text = ">>";
-            button2.UseVisualStyleBackColor = true;
+            btnQuaPhai_All.Location = new Point(373, 145);
+            btnQuaPhai_All.Name = "btnQuaPhai_All";
+            btnQuaPhai_All.Size = new Size(56, 48);
+            btnQuaPhai_All.TabIndex = 3;
+            btnQuaPhai_All.Text = ">>";
+            btnQuaPhai_All.UseVisualStyleBackColor = true;
+            btnQuaPhai_All.Click += btnQuaPhai_All_Click;
             // 
-            // button3
+            // btnQuaTrai
             // 
-            button3.Location = new Point(373, 224);
-            button3.Name = "button3";
-            button3.Size = new Size(56, 48);
-            button3.TabIndex = 4;
-            button3.Text = "<";
-            button3.UseVisualStyleBackColor = true;
+            btnQuaTrai.Location = new Point(373, 224);
+            btnQuaTrai.Name = "btnQuaTrai";
+            btnQuaTrai.Size = new Size(56, 48);
+            btnQuaTrai.TabIndex = 4;
+            btnQuaTrai.Text = "<";
+            btnQuaTrai.UseVisualStyleBackColor = true;
+            btnQuaTrai.Click += btnQuaTrai_Click;
             // 
-            // button4
+            // btnQuaTraiAll
             // 
-            button4.Location = new Point(373, 299);
-            button4.Name = "button4";
-            button4.Size = new Size(56, 48);
-            button4.TabIndex = 5;
-            button4.Text = "<<";
-            button4.UseVisualStyleBackColor = true;
+            btnQuaTraiAll.Location = new Point(373, 299);
+            btnQuaTraiAll.Name = "btnQuaTraiAll";
+            btnQuaTraiAll.Size = new Size(56, 48);
+            btnQuaTraiAll.TabIndex = 5;
+            btnQuaTraiAll.Text = "<<";
+            btnQuaTraiAll.UseVisualStyleBackColor = true;
+            btnQuaTraiAll.Click += btnQuaTraiAll_Click;
             // 
             // C5_1_1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnQuaTraiAll);
+            Controls.Add(btnQuaTrai);
+            Controls.Add(btnQuaPhai_All);
+            Controls.Add(btnQuaPhai);
             Controls.Add(lstbPhai);
             Controls.Add(lstbTrai);
             Name = "C5_1_1";
             Text = "C5_1_1";
+            Load += C5_1_1_Load;
             ResumeLayout(false);
         }
 
@@ -110,9 +115,9 @@
 
         private ListBox lstbTrai;
         private ListBox lstbPhai;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnQuaPhai;
+        private Button btnQuaPhai_All;
+        private Button btnQuaTrai;
+        private Button btnQuaTraiAll;
     }
 }
