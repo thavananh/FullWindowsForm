@@ -28,25 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
-            button2 = new Button();
+            cboDanhSachSo = new ComboBox();
+            btnCapNhat = new Button();
+            txtNhapSo = new TextBox();
+            btnThoat = new Button();
             groupBox2 = new GroupBox();
-            textBox2 = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btnTongCacUocSo = new Button();
+            btnSoLuongCacUocSoChan = new Button();
+            btnSoLuongCacUocSoNguyenTo = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            listBox1 = new ListBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(cboDanhSachSo);
+            groupBox1.Controls.Add(btnCapNhat);
+            groupBox1.Controls.Add(txtNhapSo);
             groupBox1.Location = new Point(46, 29);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(284, 125);
@@ -54,42 +57,44 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Nhập số";
             // 
-            // textBox1
+            // cboDanhSachSo
             // 
-            textBox1.Location = new Point(15, 26);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(149, 27);
-            textBox1.TabIndex = 0;
+            cboDanhSachSo.FormattingEnabled = true;
+            cboDanhSachSo.Location = new Point(15, 72);
+            cboDanhSachSo.Name = "cboDanhSachSo";
+            cboDanhSachSo.Size = new Size(258, 28);
+            cboDanhSachSo.TabIndex = 2;
             // 
-            // button1
+            // btnCapNhat
             // 
-            button1.Location = new Point(179, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Cập nhật";
-            button1.UseVisualStyleBackColor = true;
+            btnCapNhat.Location = new Point(179, 24);
+            btnCapNhat.Name = "btnCapNhat";
+            btnCapNhat.Size = new Size(94, 29);
+            btnCapNhat.TabIndex = 1;
+            btnCapNhat.Text = "Cập nhật";
+            btnCapNhat.UseVisualStyleBackColor = true;
+            btnCapNhat.Click += btnCapNhat_Click;
             // 
-            // comboBox1
+            // txtNhapSo
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(15, 72);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(258, 28);
-            comboBox1.TabIndex = 2;
+            txtNhapSo.Location = new Point(15, 26);
+            txtNhapSo.Name = "txtNhapSo";
+            txtNhapSo.Size = new Size(149, 27);
+            txtNhapSo.TabIndex = 0;
             // 
-            // button2
+            // btnThoat
             // 
-            button2.Location = new Point(236, 160);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 1;
-            button2.Text = "Thoát";
-            button2.UseVisualStyleBackColor = true;
+            btnThoat.Location = new Point(236, 160);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(94, 29);
+            btnThoat.TabIndex = 1;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(listBox1);
             groupBox2.Location = new Point(351, 29);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(250, 125);
@@ -97,72 +102,81 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách các ước số";
             // 
-            // textBox2
+            // btnTongCacUocSo
             // 
-            textBox2.Location = new Point(31, 26);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(190, 83);
-            textBox2.TabIndex = 0;
+            btnTongCacUocSo.Location = new Point(392, 160);
+            btnTongCacUocSo.Name = "btnTongCacUocSo";
+            btnTongCacUocSo.Size = new Size(221, 29);
+            btnTongCacUocSo.TabIndex = 3;
+            btnTongCacUocSo.Text = "Tổng các ước số";
+            btnTongCacUocSo.UseVisualStyleBackColor = true;
+            btnTongCacUocSo.Click += btnTongCacUocSo_Click;
             // 
-            // button3
+            // btnSoLuongCacUocSoChan
             // 
-            button3.Location = new Point(392, 160);
-            button3.Name = "button3";
-            button3.Size = new Size(221, 29);
-            button3.TabIndex = 3;
-            button3.Text = "Tổng các ước số";
-            button3.UseVisualStyleBackColor = true;
+            btnSoLuongCacUocSoChan.Location = new Point(392, 195);
+            btnSoLuongCacUocSoChan.Name = "btnSoLuongCacUocSoChan";
+            btnSoLuongCacUocSoChan.Size = new Size(221, 29);
+            btnSoLuongCacUocSoChan.TabIndex = 4;
+            btnSoLuongCacUocSoChan.Text = "Số lượng các ước số chẵn";
+            btnSoLuongCacUocSoChan.UseVisualStyleBackColor = true;
+            btnSoLuongCacUocSoChan.Click += btnSoLuongCacUocSoChan_Click;
             // 
-            // button4
+            // btnSoLuongCacUocSoNguyenTo
             // 
-            button4.Location = new Point(392, 195);
-            button4.Name = "button4";
-            button4.Size = new Size(221, 29);
-            button4.TabIndex = 4;
-            button4.Text = "Số lượng các ước số chẵn";
-            button4.UseVisualStyleBackColor = true;
+            btnSoLuongCacUocSoNguyenTo.Location = new Point(392, 230);
+            btnSoLuongCacUocSoNguyenTo.Name = "btnSoLuongCacUocSoNguyenTo";
+            btnSoLuongCacUocSoNguyenTo.Size = new Size(221, 29);
+            btnSoLuongCacUocSoNguyenTo.TabIndex = 5;
+            btnSoLuongCacUocSoNguyenTo.Text = "Số lượng các ước số nguyên tố";
+            btnSoLuongCacUocSoNguyenTo.UseVisualStyleBackColor = true;
+            btnSoLuongCacUocSoNguyenTo.Click += btnSoLuongCacUocSoNguyenTo_Click;
             // 
-            // button5
+            // errorProvider1
             // 
-            button5.Location = new Point(392, 230);
-            button5.Name = "button5";
-            button5.Size = new Size(221, 29);
-            button5.TabIndex = 5;
-            button5.Text = "Số lượng các ước số nguyên tố";
-            button5.UseVisualStyleBackColor = true;
+            errorProvider1.ContainerControl = this;
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(41, 21);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(183, 104);
+            listBox1.TabIndex = 0;
             // 
             // C5_2_1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(629, 280);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(btnSoLuongCacUocSoNguyenTo);
+            Controls.Add(btnSoLuongCacUocSoChan);
+            Controls.Add(btnTongCacUocSo);
             Controls.Add(groupBox2);
-            Controls.Add(button2);
+            Controls.Add(btnThoat);
             Controls.Add(groupBox1);
             Name = "C5_2_1";
             Text = "C5_2_1";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private GroupBox groupBox1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private Button button1;
-        private Button button2;
+        private TextBox txtNhapSo;
+        private ComboBox cboDanhSachSo;
+        private Button btnCapNhat;
+        private Button btnThoat;
         private GroupBox groupBox2;
-        private TextBox textBox2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button btnTongCacUocSo;
+        private Button btnSoLuongCacUocSoChan;
+        private Button btnSoLuongCacUocSoNguyenTo;
+        private ErrorProvider errorProvider1;
+        private ListBox listBox1;
     }
 }
