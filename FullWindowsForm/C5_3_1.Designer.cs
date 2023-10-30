@@ -28,126 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            listView1 = new ListView();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            btnXoaPhanTuDangChon = new Button();
+            btnXoaPhanTuCoTenLaSon = new Button();
+            btnXoaPhanTuCoHoLaLe = new Button();
+            btnChuyenPTDangChonLaChuHoa = new Button();
+            btnChuyenPTDangChonThanhChuThuong = new Button();
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu = new Button();
+            btnXoaTatCaCacPhanTu = new Button();
+            listBox1 = new ListBox();
+            btnNhapTenNgauNhien = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnXoaPhanTuDangChon
             // 
-            button1.Location = new Point(61, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(199, 54);
-            button1.TabIndex = 0;
-            button1.Text = "Nhập tên ngẫu nhiên";
-            button1.UseVisualStyleBackColor = true;
+            btnXoaPhanTuDangChon.Location = new Point(382, 116);
+            btnXoaPhanTuDangChon.Name = "btnXoaPhanTuDangChon";
+            btnXoaPhanTuDangChon.Size = new Size(340, 34);
+            btnXoaPhanTuDangChon.TabIndex = 2;
+            btnXoaPhanTuDangChon.Text = "Xoá phần tử đang chọn";
+            btnXoaPhanTuDangChon.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // btnXoaPhanTuCoTenLaSon
             // 
-            listView1.Location = new Point(65, 101);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(206, 305);
-            listView1.TabIndex = 1;
-            listView1.UseCompatibleStateImageBehavior = false;
+            btnXoaPhanTuCoTenLaSon.Location = new Point(382, 156);
+            btnXoaPhanTuCoTenLaSon.Name = "btnXoaPhanTuCoTenLaSon";
+            btnXoaPhanTuCoTenLaSon.Size = new Size(340, 34);
+            btnXoaPhanTuCoTenLaSon.TabIndex = 3;
+            btnXoaPhanTuCoTenLaSon.Text = "Xoá phần tử có tên là Sơn";
+            btnXoaPhanTuCoTenLaSon.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnXoaPhanTuCoHoLaLe
             // 
-            button2.Location = new Point(277, 101);
-            button2.Name = "button2";
-            button2.Size = new Size(340, 34);
-            button2.TabIndex = 2;
-            button2.Text = "Xoá phần tử đang chọn";
-            button2.UseVisualStyleBackColor = true;
+            btnXoaPhanTuCoHoLaLe.Location = new Point(382, 196);
+            btnXoaPhanTuCoHoLaLe.Name = "btnXoaPhanTuCoHoLaLe";
+            btnXoaPhanTuCoHoLaLe.Size = new Size(340, 34);
+            btnXoaPhanTuCoHoLaLe.TabIndex = 4;
+            btnXoaPhanTuCoHoLaLe.Text = "Xoá phần tử có họ là Lê";
+            btnXoaPhanTuCoHoLaLe.UseVisualStyleBackColor = true;
+            btnXoaPhanTuCoHoLaLe.Click += btnXoaPhanTuCoHoLaLe_Click;
             // 
-            // button3
+            // btnChuyenPTDangChonLaChuHoa
             // 
-            button3.Location = new Point(277, 141);
-            button3.Name = "button3";
-            button3.Size = new Size(340, 34);
-            button3.TabIndex = 3;
-            button3.Text = "Xoá phần tử có tên là Sơn";
-            button3.UseVisualStyleBackColor = true;
+            btnChuyenPTDangChonLaChuHoa.Location = new Point(382, 236);
+            btnChuyenPTDangChonLaChuHoa.Name = "btnChuyenPTDangChonLaChuHoa";
+            btnChuyenPTDangChonLaChuHoa.Size = new Size(340, 34);
+            btnChuyenPTDangChonLaChuHoa.TabIndex = 5;
+            btnChuyenPTDangChonLaChuHoa.Text = "Chuyển PT đang chọn là chữ HOA";
+            btnChuyenPTDangChonLaChuHoa.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnChuyenPTDangChonThanhChuThuong
             // 
-            button4.Location = new Point(277, 181);
-            button4.Name = "button4";
-            button4.Size = new Size(340, 34);
-            button4.TabIndex = 4;
-            button4.Text = "Xoá phần tử có họ là Lê";
-            button4.UseVisualStyleBackColor = true;
+            btnChuyenPTDangChonThanhChuThuong.Location = new Point(382, 276);
+            btnChuyenPTDangChonThanhChuThuong.Name = "btnChuyenPTDangChonThanhChuThuong";
+            btnChuyenPTDangChonThanhChuThuong.Size = new Size(340, 34);
+            btnChuyenPTDangChonThanhChuThuong.TabIndex = 6;
+            btnChuyenPTDangChonThanhChuThuong.Text = "Chuyển PT đang chọn chọn thành chữ thường";
+            btnChuyenPTDangChonThanhChuThuong.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnChuyenPTDangChonThanhVietHoaDauMoiTu
             // 
-            button5.Location = new Point(277, 221);
-            button5.Name = "button5";
-            button5.Size = new Size(340, 34);
-            button5.TabIndex = 5;
-            button5.Text = "Chuyển PT đang chọn là chữ HOA";
-            button5.UseVisualStyleBackColor = true;
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.Location = new Point(382, 316);
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.Name = "btnChuyenPTDangChonThanhVietHoaDauMoiTu";
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.Size = new Size(340, 34);
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.TabIndex = 7;
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.Text = "Chuyển PT đang chọn thành viết Hoa đầu mỗi từ";
+            btnChuyenPTDangChonThanhVietHoaDauMoiTu.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnXoaTatCaCacPhanTu
             // 
-            button6.Location = new Point(277, 261);
-            button6.Name = "button6";
-            button6.Size = new Size(340, 34);
-            button6.TabIndex = 6;
-            button6.Text = "Chuyển PT đang chọn chọn thành chữ thường";
-            button6.UseVisualStyleBackColor = true;
+            btnXoaTatCaCacPhanTu.Location = new Point(382, 356);
+            btnXoaTatCaCacPhanTu.Name = "btnXoaTatCaCacPhanTu";
+            btnXoaTatCaCacPhanTu.Size = new Size(340, 34);
+            btnXoaTatCaCacPhanTu.TabIndex = 8;
+            btnXoaTatCaCacPhanTu.Text = "Xoá tất cả các phần tử";
+            btnXoaTatCaCacPhanTu.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // listBox1
             // 
-            button7.Location = new Point(277, 301);
-            button7.Name = "button7";
-            button7.Size = new Size(340, 34);
-            button7.TabIndex = 7;
-            button7.Text = "Chuyển PT đang chọn thành viết Hoa đầu mỗi từ";
-            button7.UseVisualStyleBackColor = true;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(61, 116);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(236, 264);
+            listBox1.TabIndex = 9;
             // 
-            // button8
+            // btnNhapTenNgauNhien
             // 
-            button8.Location = new Point(277, 341);
-            button8.Name = "button8";
-            button8.Size = new Size(340, 34);
-            button8.TabIndex = 8;
-            button8.Text = "Xoá phần tử đang chọn";
-            button8.UseVisualStyleBackColor = true;
+            btnNhapTenNgauNhien.Location = new Point(61, 28);
+            btnNhapTenNgauNhien.Name = "btnNhapTenNgauNhien";
+            btnNhapTenNgauNhien.Size = new Size(199, 54);
+            btnNhapTenNgauNhien.TabIndex = 0;
+            btnNhapTenNgauNhien.Text = "Nhập tên ngẫu nhiên";
+            btnNhapTenNgauNhien.UseVisualStyleBackColor = true;
             // 
             // C5_3_1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(listView1);
-            Controls.Add(button1);
+            Controls.Add(listBox1);
+            Controls.Add(btnXoaTatCaCacPhanTu);
+            Controls.Add(btnChuyenPTDangChonThanhVietHoaDauMoiTu);
+            Controls.Add(btnChuyenPTDangChonThanhChuThuong);
+            Controls.Add(btnChuyenPTDangChonLaChuHoa);
+            Controls.Add(btnXoaPhanTuCoHoLaLe);
+            Controls.Add(btnXoaPhanTuCoTenLaSon);
+            Controls.Add(btnXoaPhanTuDangChon);
+            Controls.Add(btnNhapTenNgauNhien);
             Name = "C5_3_1";
             Text = "C5_3_1";
+            Load += C5_3_1_Load;
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button button1;
-        private ListView listView1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button btnXoaPhanTuDangChon;
+        private Button btnXoaPhanTuCoTenLaSon;
+        private Button btnXoaPhanTuCoHoLaLe;
+        private Button btnChuyenPTDangChonLaChuHoa;
+        private Button btnChuyenPTDangChonThanhChuThuong;
+        private Button btnChuyenPTDangChonThanhVietHoaDauMoiTu;
+        private Button btnXoaTatCaCacPhanTu;
+        private ListBox listBox1;
+        private Button btnNhapTenNgauNhien;
     }
 }
