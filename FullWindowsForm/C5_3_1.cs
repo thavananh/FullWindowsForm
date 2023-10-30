@@ -111,6 +111,7 @@ namespace FullWindowsForm
             btnChuyenPTDangChonThanhChuThuong.Click += btnChuyenPTDangChonThanhChuThuong_Click;
             btnChuyenPTDangChonLaChuHoa.Click += btnChuyenPTDangChonThanhChuHoa_Click;
             btnChuyenPTDangChonThanhVietHoaDauMoiTu.Click += btnChuyenPhanTuDangChonThanhChuHoaMoiTu_Click;
+            btnXoaTatCaCacPhanTu.Click += btnXoaTatCaCacPhanTu_Click;
             dictionaryLoad();
         }
 
@@ -176,6 +177,10 @@ namespace FullWindowsForm
                 listBox1.DataSource = null; // Thiết lập DataSource thành null trước để đảm bảo việc cập nhật.
                 listBox1.DataSource = items;
             }
+        }
+        private void btnXoaTatCaCacPhanTu_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
         }
     }
 }
