@@ -31,20 +31,18 @@
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
-            listView2 = new ListView();
-            listView1 = new ListView();
             button1 = new Button();
             button2 = new Button();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(listView2);
-            panel1.Controls.Add(listView1);
             panel1.Location = new Point(133, 62);
             panel1.Name = "panel1";
             panel1.Size = new Size(534, 297);
@@ -68,22 +66,6 @@
             label1.TabIndex = 2;
             label1.Text = "Tiếng Anh";
             // 
-            // listView2
-            // 
-            listView2.Location = new Point(315, 44);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(186, 218);
-            listView2.TabIndex = 1;
-            listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView1
-            // 
-            listView1.Location = new Point(32, 44);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(186, 218);
-            listView1.TabIndex = 0;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // button1
             // 
             button1.Location = new Point(133, 36);
@@ -101,6 +83,14 @@
             button2.TabIndex = 2;
             button2.Text = "Việt-Anh";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(33, 53);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 4;
             // 
             // C5_4_1
             // 
@@ -124,7 +114,6 @@
         private Button button2;
         private Label label2;
         private Label label1;
-        private ListView listView2;
-        private ListView listView1;
+        private ComboBox comboBox1;
     }
 }
