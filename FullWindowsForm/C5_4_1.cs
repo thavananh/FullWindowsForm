@@ -78,7 +78,15 @@ namespace FullWindowsForm
                 }
                 else
                 {
-                    txtTiengViet.Text = wordListDictionary[wordFind[0]];
+                    if (wordFind.Count == 0)
+                    {
+                        MessageBox.Show("Bạn nhập từ không tồn tại");
+                    }
+                    else
+                    {
+                        txtTiengViet.Text = wordListDictionary[wordFind[0]];
+                    }
+                    
                 }
             }
         }
@@ -90,7 +98,7 @@ namespace FullWindowsForm
                 List<string> tmp = new List<string>();
                 tmp = wordFind;
                 wordFind = new List<string>();
-                if (tmp.Count > 0)
+                if (tmp.Count > 0 && cboTiengAnh.Text.Length > 1)
                 {
                     for (int i = 0; i < tmp.Count; i++)
                     {
@@ -121,7 +129,6 @@ namespace FullWindowsForm
                 {
                     foreach (var VARIABLE in cboTiengAnh.Items)
                     {
-
                         if (VARIABLE.ToString()[0] == cboTiengAnh.Text[0])
                         {
                             wordFind.Add(VARIABLE.ToString());
