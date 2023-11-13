@@ -35,12 +35,14 @@
             label1 = new Label();
             btnAnhViet = new Button();
             btnVietAnh = new Button();
+            listBox1 = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(listBox1);
             panel1.Controls.Add(txtTiengViet);
             panel1.Controls.Add(cboTiengAnh);
             panel1.Controls.Add(label2);
@@ -63,7 +65,7 @@
             cboTiengAnh.FormattingEnabled = true;
             cboTiengAnh.Location = new Point(33, 35);
             cboTiengAnh.Name = "cboTiengAnh";
-            cboTiengAnh.Size = new Size(151, 28);
+            cboTiengAnh.Size = new Size(183, 28);
             cboTiengAnh.TabIndex = 4;
             cboTiengAnh.SelectedIndexChanged += cboTiengAnh_SelectedIndexChanged;
             cboTiengAnh.TextChanged += txtCboTiengAnh_TextChanged;
@@ -107,6 +109,15 @@
             btnVietAnh.UseVisualStyleBackColor = true;
             btnVietAnh.Click += btnVietAnh_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 20;
+            listBox1.Location = new Point(45, 102);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(150, 104);
+            listBox1.TabIndex = 6;
+            // 
             // C5_4_1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -132,5 +143,6 @@
         private Label label1;
         private ComboBox cboTiengAnh;
         private TextBox txtTiengViet;
+        private ListBox listBox1;
     }
 }

@@ -49,7 +49,6 @@ namespace FullWindowsForm
 
         void loadTuVung()
         {
-
             foreach (var VARIABLE in wordListDictionary)
             {
                 cboTiengAnh.Items.Add(VARIABLE.Key);
@@ -58,95 +57,82 @@ namespace FullWindowsForm
 
         private void cboTiengAnh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            searchIndex = 0;
-            
-
-            string val = "";
-            wordListDictionary.TryGetValue(cboTiengAnh.SelectedItem.ToString(), out val);
-            txtTiengViet.Text = val;
-            isFirst = true;
+            txtTiengViet.Text = wordListDictionary[cboTiengAnh.SelectedItem.ToString()];
         }
 
         private List<string> wordFind = new List<string>();
 
-        private int searchIndex = 0;
-
         private void txtCboTiengAnh_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '\r')
             {
                 e.Handled = true;
             }
 
-            if (e.KeyChar == '\b')
+            if (e.KeyChar == '\r')
             {
-                if (searchIndex > 0)
+                if (cboTiengAnh.Text.Length == 0)
                 {
-                    searchIndex--;
+                    MessageBox.Show("Bạn nhập từ không tồn tại");
                 }
                 else
                 {
-                    wordFind = new List<string>();
-                    isFirst = true;
+                    txtTiengViet.Text = wordListDictionary[wordFind[0]];
                 }
-
             }
-            if (e.KeyChar == '\r' && wordFind.Count > 0)
-            {
-                string val = "";
-                wordListDictionary.TryGetValue(wordFind[0], out val);
-                txtTiengViet.Text = val;
-            }
-            
         }
-
-        private bool isFirst = true;
 
         private void txtCboTiengAnh_TextChanged(object sender, EventArgs e)
         {
-            ComboBox cbo = (ComboBox)sender;
-            if (!isFirst)
+            if (cboTiengAnh.Text.Length != 0)
             {
-                for (int i = 0; i < wordFind.Count; i++)
+                List<string> tmp = new List<string>();
+                tmp = wordFind;
+                wordFind = new List<string>();
+                if (tmp.Count > 0)
                 {
-                    if (cboTiengAnh.Text[cboTiengAnh.Text.Length - 1] == wordFind[i].ToString()[searchIndex])
+                    for (int i = 0; i < tmp.Count; i++)
                     {
-                        wordFind.Add(wordFind[i]);
-                        wordFind = wordFind.Distinct().ToList();
-                        
-                    }
-                }
-                searchIndex++;
-            }
-            else
-            {
-                foreach (var VARIABLE in cboTiengAnh.Items)
-                {
-                    if (cboTiengAnh.Text.Length > 0)
-                    {
-                        if (cboTiengAnh.Text[cboTiengAnh.Text.Length - 1] == VARIABLE.ToString()[searchIndex])
+                        bool b1 = false;
+                        for (int j = 0; j < cboTiengAnh.Text.Length; j++)
                         {
-                            wordFind.Add(VARIABLE.ToString());
-                            wordFind = wordFind.Distinct().ToList();
+                            if (tmp[i].Length >= cboTiengAnh.Text.Length)
+                            {
+                                if (tmp[i][j] != cboTiengAnh.Text[j])
+                                {
+                                    b1 = true;
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                b1 = true;
+                                break;
+                            }
+                        }
+                        if (!b1)
+                        {
+                            wordFind.Add(tmp[i]);
                         }
                     }
-                    else
-                    {
-                        isFirst = true;
-                        break;
-                    }
-                }
-                if (wordFind.Count != 0)
-                {
-                    isFirst = false;
                 }
                 else
                 {
-                    isFirst = true;
+                    foreach (var VARIABLE in cboTiengAnh.Items)
+                    {
+
+                        if (VARIABLE.ToString()[0] == cboTiengAnh.Text[0])
+                        {
+                            wordFind.Add(VARIABLE.ToString());
+                        }
+                    }
                 }
-                
             }
-            
+            else
+            {
+                wordFind = new List<string>();
+            }
         }
     }
 }
