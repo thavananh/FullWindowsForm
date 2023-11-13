@@ -29,24 +29,45 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            txtTiengViet = new TextBox();
+            cboTiengAnh = new ComboBox();
             label2 = new Label();
             label1 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            comboBox1 = new ComboBox();
+            btnAnhViet = new Button();
+            btnVietAnh = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(txtTiengViet);
+            panel1.Controls.Add(cboTiengAnh);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(133, 62);
+            panel1.Location = new Point(133, 71);
             panel1.Name = "panel1";
             panel1.Size = new Size(534, 297);
             panel1.TabIndex = 0;
+            // 
+            // txtTiengViet
+            // 
+            txtTiengViet.Location = new Point(315, 35);
+            txtTiengViet.Multiline = true;
+            txtTiengViet.Name = "txtTiengViet";
+            txtTiengViet.Size = new Size(204, 243);
+            txtTiengViet.TabIndex = 5;
+            // 
+            // cboTiengAnh
+            // 
+            cboTiengAnh.FormattingEnabled = true;
+            cboTiengAnh.Location = new Point(33, 35);
+            cboTiengAnh.Name = "cboTiengAnh";
+            cboTiengAnh.Size = new Size(151, 28);
+            cboTiengAnh.TabIndex = 4;
+            cboTiengAnh.SelectedIndexChanged += cboTiengAnh_SelectedIndexChanged;
+            cboTiengAnh.TextChanged += txtCboTiengAnh_TextChanged;
+            cboTiengAnh.KeyPress += txtCboTiengAnh_KeyPress;
             // 
             // label2
             // 
@@ -66,42 +87,37 @@
             label1.TabIndex = 2;
             label1.Text = "Tiếng Anh";
             // 
-            // button1
+            // btnAnhViet
             // 
-            button1.Location = new Point(133, 36);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Anh-Việt";
-            button1.UseVisualStyleBackColor = true;
+            btnAnhViet.Location = new Point(133, 36);
+            btnAnhViet.Name = "btnAnhViet";
+            btnAnhViet.Size = new Size(94, 29);
+            btnAnhViet.TabIndex = 1;
+            btnAnhViet.Text = "Anh-Việt";
+            btnAnhViet.UseVisualStyleBackColor = true;
+            btnAnhViet.Click += btnAnhViet_Click;
             // 
-            // button2
+            // btnVietAnh
             // 
-            button2.Location = new Point(224, 36);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Việt-Anh";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(33, 53);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 4;
+            btnVietAnh.Location = new Point(224, 36);
+            btnVietAnh.Name = "btnVietAnh";
+            btnVietAnh.Size = new Size(94, 29);
+            btnVietAnh.TabIndex = 2;
+            btnVietAnh.Text = "Việt-Anh";
+            btnVietAnh.UseVisualStyleBackColor = true;
+            btnVietAnh.Click += btnVietAnh_Click;
             // 
             // C5_4_1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnVietAnh);
+            Controls.Add(btnAnhViet);
             Controls.Add(panel1);
             Name = "C5_4_1";
             Text = "C5_4_1";
+            Load += C5_4_1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -110,10 +126,11 @@
         #endregion
 
         private Panel panel1;
-        private Button button1;
-        private Button button2;
+        private Button btnAnhViet;
+        private Button btnVietAnh;
         private Label label2;
         private Label label1;
-        private ComboBox comboBox1;
+        private ComboBox cboTiengAnh;
+        private TextBox txtTiengViet;
     }
 }
