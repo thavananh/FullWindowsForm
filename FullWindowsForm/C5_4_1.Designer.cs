@@ -35,37 +35,38 @@
             label1 = new Label();
             btnAnhViet = new Button();
             btnVietAnh = new Button();
-            listBox1 = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(listBox1);
             panel1.Controls.Add(txtTiengViet);
             panel1.Controls.Add(cboTiengAnh);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(133, 71);
+            panel1.Location = new Point(116, 53);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(534, 297);
+            panel1.Size = new Size(468, 223);
             panel1.TabIndex = 0;
             // 
             // txtTiengViet
             // 
-            txtTiengViet.Location = new Point(315, 35);
+            txtTiengViet.Location = new Point(276, 26);
+            txtTiengViet.Margin = new Padding(3, 2, 3, 2);
             txtTiengViet.Multiline = true;
             txtTiengViet.Name = "txtTiengViet";
-            txtTiengViet.Size = new Size(204, 243);
+            txtTiengViet.Size = new Size(179, 183);
             txtTiengViet.TabIndex = 5;
             // 
             // cboTiengAnh
             // 
             cboTiengAnh.FormattingEnabled = true;
-            cboTiengAnh.Location = new Point(33, 35);
+            cboTiengAnh.Location = new Point(29, 26);
+            cboTiengAnh.Margin = new Padding(3, 2, 3, 2);
             cboTiengAnh.Name = "cboTiengAnh";
-            cboTiengAnh.Size = new Size(183, 28);
+            cboTiengAnh.Size = new Size(161, 23);
             cboTiengAnh.TabIndex = 4;
             cboTiengAnh.SelectedIndexChanged += cboTiengAnh_SelectedIndexChanged;
             cboTiengAnh.TextChanged += txtCboTiengAnh_TextChanged;
@@ -74,26 +75,27 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(315, 12);
+            label2.Location = new Point(276, 9);
             label2.Name = "label2";
-            label2.Size = new Size(76, 20);
+            label2.Size = new Size(59, 15);
             label2.TabIndex = 3;
             label2.Text = "Tiếng Việt";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(32, 12);
+            label1.Location = new Point(28, 9);
             label1.Name = "label1";
-            label1.Size = new Size(76, 20);
+            label1.Size = new Size(61, 15);
             label1.TabIndex = 2;
             label1.Text = "Tiếng Anh";
             // 
             // btnAnhViet
             // 
-            btnAnhViet.Location = new Point(133, 36);
+            btnAnhViet.Location = new Point(116, 27);
+            btnAnhViet.Margin = new Padding(3, 2, 3, 2);
             btnAnhViet.Name = "btnAnhViet";
-            btnAnhViet.Size = new Size(94, 29);
+            btnAnhViet.Size = new Size(82, 22);
             btnAnhViet.TabIndex = 1;
             btnAnhViet.Text = "Anh-Việt";
             btnAnhViet.UseVisualStyleBackColor = true;
@@ -101,31 +103,24 @@
             // 
             // btnVietAnh
             // 
-            btnVietAnh.Location = new Point(224, 36);
+            btnVietAnh.Location = new Point(196, 27);
+            btnVietAnh.Margin = new Padding(3, 2, 3, 2);
             btnVietAnh.Name = "btnVietAnh";
-            btnVietAnh.Size = new Size(94, 29);
+            btnVietAnh.Size = new Size(82, 22);
             btnVietAnh.TabIndex = 2;
             btnVietAnh.Text = "Việt-Anh";
             btnVietAnh.UseVisualStyleBackColor = true;
             btnVietAnh.Click += btnVietAnh_Click;
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(45, 102);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 104);
-            listBox1.TabIndex = 6;
-            // 
             // C5_4_1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(btnVietAnh);
             Controls.Add(btnAnhViet);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "C5_4_1";
             Text = "C5_4_1";
             Load += C5_4_1_Load;
@@ -143,6 +138,5 @@
         private Label label1;
         private ComboBox cboTiengAnh;
         private TextBox txtTiengViet;
-        private ListBox listBox1;
     }
 }

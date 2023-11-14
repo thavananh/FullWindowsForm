@@ -64,7 +64,7 @@ namespace FullWindowsForm
 
         private void txtCboTiengAnh_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != '\b' && e.KeyChar != '\r')
             {
                 e.Handled = true;
@@ -86,7 +86,7 @@ namespace FullWindowsForm
                     {
                         txtTiengViet.Text = wordListDictionary[wordFind[0]];
                     }
-                    
+
                 }
             }
         }
