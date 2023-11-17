@@ -23,7 +23,6 @@ namespace FullWindowsForm
         {
 
             bool found1 = false;
-            
             foreach (ListViewItem itemLoop in listView1.Items)
             {
                 string val = itemLoop.SubItems[0].Text;
@@ -37,17 +36,15 @@ namespace FullWindowsForm
                 MessageBox.Show("Mã sinh viên bạn nhập đã tồn tại");
                 return;
             }
-                ListViewItem item = new ListViewItem();
-                ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
-                item.Text = txtMaSinhVien.Text;
-                subItem.Text = txtHoTen.Text;
-                ListViewItem.ListViewSubItem subItem1 = new ListViewItem.ListViewSubItem();
-                subItem1.Text = "Sống vui";
-                item.SubItems.Add(subItem);
-                item.SubItems.Add(subItem1);
-                listView1.Items.Add(item);
-                
-            
+            ListViewItem item = new ListViewItem();
+            ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem();
+            item.Text = txtMaSinhVien.Text;
+            subItem.Text = txtHoTen.Text;
+            ListViewItem.ListViewSubItem subItem1 = new ListViewItem.ListViewSubItem();
+            subItem1.Text = "Sống vui";
+            item.SubItems.Add(subItem);
+            item.SubItems.Add(subItem1);
+            listView1.Items.Add(item);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

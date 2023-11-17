@@ -12,7 +12,6 @@ namespace FullWindowsForm
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new C6_2_1());
-
         }
     }
 }
