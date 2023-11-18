@@ -56,6 +56,8 @@ namespace FullWindowsForm
             }
         }
 
+        
+
         private void ptcbThem_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem existingItem in lstvSinhVien.Items)
