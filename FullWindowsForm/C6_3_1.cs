@@ -50,7 +50,10 @@ namespace FullWindowsForm
 
         private void mnst_InputHocVienMoi_Click(object sender, EventArgs e)
         {
-
+            C6_3_1_1 frmC6_3_1_1 = new C6_3_1_1();
+            frmC6_3_1_1.Show();
+            this.Hide();
+            C6_3_1_1.isOpenForm;
         }
 
         private void mnst_ChuyenSangLopB_Click(object sender, EventArgs e)
