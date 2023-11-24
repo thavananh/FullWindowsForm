@@ -48,11 +48,24 @@ namespace FullWindowsForm
 
         }
 
+        private void loadData(string hoTen, string lop)
+        {
+            if (lop == "lopa")
+            {
+                lstbLopA.Items.Add(hoTen);
+            }
+            else
+            {
+                lstbLopB.Items.Add(hoTen);
+            }
+        }
+
         private void mnst_InputHocVienMoi_Click(object sender, EventArgs e)
         {
             C6_3_1_1 frmC6_3_1_1 = new C6_3_1_1();
+            frmC6_3_1_1.TruyenDataChoC631 = new C6_3_1_1.truyenChoC6_3_1(loadData);
             frmC6_3_1_1.Show();
-            this.Hide();
+
         }
 
         private void mnst_ChuyenSangLopB_Click(object sender, EventArgs e)
