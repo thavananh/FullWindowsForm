@@ -37,14 +37,14 @@
             textBox1.Location = new Point(82, 86);
             textBox1.Margin = new Padding(6);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(182, 35);
+            textBox1.Size = new Size(182, 42);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
             button1.Location = new Point(273, 73);
             button1.Name = "button1";
-            button1.Size = new Size(101, 62);
+            button1.Size = new Size(140, 67);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -52,7 +52,7 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(13F, 30F);
+            AutoScaleDimensions = new SizeF(16F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(722, 435);
             Controls.Add(button1);

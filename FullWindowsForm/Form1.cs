@@ -12,6 +12,9 @@ namespace FullWindowsForm
 {
     public partial class Form1 : Form
     {
+        public delegate void truyenChoForm2(string text);
+
+        public truyenChoForm2 TruyendataChoForm2;
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +24,9 @@ namespace FullWindowsForm
         {
             if (textBox1.Text.Trim().Length > 0)
             {
-                
+                //Form2 form2 = new Form2(textBox1.Text);
+                //form2.ShowDialog();
+                TruyendataChoForm2(textBox1.Text.Trim());
             }
         }
     }

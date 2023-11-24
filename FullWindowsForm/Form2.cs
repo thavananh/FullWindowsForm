@@ -18,15 +18,28 @@ namespace FullWindowsForm
             InitializeComponent();
         }
 
-        public Form2(string helloworld)
-        {
-            InitializeComponent();
-            this.helloworld = helloworld;
-        }
+        //public Form2(string helloworld)
+        //{
+        //    InitializeComponent();
+        //    this.helloworld = helloworld;
+        //}
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            label1.Text = helloworld;
+            label2.Text = helloworld;
+        }
+
+        private void loadData(string data)
+        {
+            label2.Text = "";
+            label2.Text = data;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.TruyendataChoForm2 = new Form1.truyenChoForm2(loadData);
+            form1.ShowDialog();
         }
     }
 }
